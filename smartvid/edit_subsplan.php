@@ -15,7 +15,7 @@ if (!isset($_GET['id'])) {
 $planID = intval($_GET['id']);
 
 // Fetch plan details
-$result = mysqli_query($con, "SELECT * FROM subsplan WHERE planID = $planID");
+$result = mysqli_query($conn, "SELECT * FROM subsplan WHERE planID = $planID");
 $plan = mysqli_fetch_assoc($result);
 
 if (!$plan) {
@@ -25,11 +25,11 @@ if (!$plan) {
 
 // Handle form submission
 if (isset($_POST['updatePlan'])) {
-    $planName = mysqli_real_escape_string($con, $_POST['plan_name']);
+    $planName = mysqli_real_escape_string($conn, $_POST['plan_name']);
     $price = floatval($_POST['price']);
-    $description = mysqli_real_escape_string($con, $_POST['description']);
+    $description = mysqli_real_escape_string($conn, $_POST['description']);
 
-    mysqli_query($con, "UPDATE subsplan SET plan_name='$planName', price=$price, description='$description' WHERE planID=$planID");
+    mysqli_query($conn, "UPDATE subsplan SET plan_name='$planName', price=$price, description='$description' WHERE planID=$planID");
     header("Location: admin_dashboard.php?view=subsplan");
     exit();
 }
@@ -60,3 +60,4 @@ if (isset($_POST['updatePlan'])) {
 </div>
 </body>
 </html>
+
