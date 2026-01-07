@@ -1,0 +1,81 @@
+/* Footer Styles */
+.footer {
+    background-color: rgb(24, 24, 24);
+    color: white;
+    padding: 40px 0;
+    width: 100%;
+    font-family: 'Verdana', 'Geneva', 'Tahoma', sans-serif;
+}
+
+.footer hr {
+    border: 1px solid #555;
+    margin: 10px 0;
+}
+
+.footer .footer-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap; /* Ensures responsiveness */
+}
+
+.footer h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: rgb(241, 168, 72);
+}
+
+.footer p, .footer a {
+    font-size: 16px;
+    color: rgb(252, 243, 167);
+    margin: 5px 0;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer a:hover {
+    color: rgb(255, 253, 151);
+}
+
+.footer_content, .footer_info, .footer_links {
+    flex: 1;
+    margin: 10px;
+    min-width: 200px; /* Ensures a minimum width for each section */
+    text-align: center;
+}
+
+.footer .fa {
+    padding: 15px;
+    font-size: 20px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: 0 10px;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.footer .fa-facebook:hover {
+    background: #3b5998;
+    color: white;
+}
+
+.footer .fa-instagram:hover {
+    background: #E4405F;
+    color: white;
+}
+
+.footer .fa-tiktok:hover {
+    background: #010101;
+    color: white;
+}
+
+.footer_links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer_links li {
+    margin: 10px 0;
+}

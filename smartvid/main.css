@@ -1,0 +1,244 @@
+body, html {
+    margin: 0;
+    padding: 0; 
+    font-family: Arial, sans-serif;
+    color: #000000;
+    background-color: #A7C7E7;
+}
+
+
+
+.box1 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 500px;
+    background-color: #000080;
+    color: #F7FFCC;
+    background-image: linear-gradient(rgba(68, 68, 57, 0.9), rgba(68, 68, 60, 0.9)), url(background.mp4);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#pic1 {
+    width: 30%;
+    height: auto;
+    filter: blur(5px);
+}
+
+
+
+#logo img {
+    border-radius: 300px;
+    margin-top: 50px;
+    max-width: 200px;
+    height: auto;
+    margin-bottom: 9px;
+}
+
+.box1 #text1 {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#text1 h4 {
+    font-size: 30px;
+    font-weight: 1000;
+}
+
+.navbar {
+    background-color:#740000;
+    padding: 15px 30px; 
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed; /* Fixed to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+}
+.navbar-logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: bold;
+}
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+.navbar-links li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+.navbar-links li a:hover {
+    color: #ffb700;
+}
+/* This is a clearance element to push the content down below the fixed navbar */
+.navbar-spacer {
+    height: 60px; /* Adjust this value if your navbar is taller/shorter */
+    display: block;
+}
+
+.summarizer-container {
+    padding: 50px;
+    max-width: 600px;
+    /* Adjusted margin-top to push content below the fixed navbar */
+    margin: 100px auto 50px auto; 
+    text-align: center;
+    background-color: #202020;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+#youtubeLink {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+#summaryButton {
+    background-color: #ff0000; /* YouTube-like color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+#summaryButton:hover {
+    background-color: #cc0000;
+}
+#summaryOutput { 
+    margin-top: 20px;
+    padding: 15px;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    text-align: left;
+    white-space: pre-wrap;
+    min-height: 100px; /* Ensure space for the summary */
+    color: #000000; /* Ensure text is visible inside the light background */
+}
+.status-message {
+    margin-top: 15px;
+    color: #555;
+    font-style: italic;
+}
+.main-container {
+    background-image: url('wallpaperhomepage.jpg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    /* CHANGE THIS LINE */
+    /* Use calc() to make the minimum height 100% of the viewport (100vh) plus the navbar height (e.g., 60px) */
+    min-height: calc(100vh + 60px); 
+    /* If you used the padding-top method earlier, you may need to adjust this value */
+    
+    position: relative;
+    padding-top: 60px; /* Ensure content starts below the fixed navbar */
+}
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: #363636;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+h1 {
+    font-size: 36px;
+    margin: 20px 0;
+}
+
+p {
+    font-size: 18px;
+    color: #ffb700;
+    margin-bottom: 30px;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #740000;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* SUBJECT INPUT */
+#subjectInput {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    color: #000;
+}
+
+
+
+/* SAVE SUMMARY BUTTON */
+#saveSummaryBtn {
+    margin-top: 15px;
+    background-color: #1f4fd8;
+    color: #ffffff;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+

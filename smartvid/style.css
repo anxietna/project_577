@@ -1,0 +1,150 @@
+/* =========================
+   GLOBAL RESET & BODY
+========================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: #89CFF0; /* soft blue */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Ubuntu Sans", sans-serif;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+.container {
+    width: 380px;
+    padding: 35px 30px;
+    border-radius: 28px;
+    background: #89CFF0;
+    box-shadow:
+        12px 12px 24px rgba(0, 0, 0, 0.18),
+        -12px -12px 24px rgba(255, 255, 255, 0.8);
+}
+
+/* =========================
+   LOGO SECTION
+========================= */
+.top {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.image {
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 10px;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow:
+        4px 4px 8px rgba(0,0,0,0.2),
+        -4px -4px 8px rgba(255,255,255,0.7);
+}
+
+.top span {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: #1e1e1e;
+}
+
+/* =========================
+   FORM ELEMENTS
+========================= */
+form {
+    text-align: center;
+}
+
+.inputBox {
+    width: 100%;
+    height: 48px;
+    margin-bottom: 20px;
+    border-radius: 25px;
+    background: #89CFF0;
+    box-shadow:
+        inset 4px 4px 8px rgba(0,0,0,0.15),
+        inset -4px -4px 8px rgba(255,255,255,0.7);
+    display: flex;
+    align-items: center;
+    padding: 0 18px;
+}
+
+.input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 15px;
+    color: #333;
+}
+
+.input::placeholder {
+    color: #555;
+}
+
+/* =========================
+   BUTTON
+========================= */
+.submit {
+    width: 140px;
+    height: 45px;
+    margin-top: 10px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background: #89CFF0;
+    font-weight: bold;
+    letter-spacing: 1px;
+    box-shadow:
+        6px 6px 10px rgba(0,0,0,0.25),
+        -6px -6px 10px rgba(255,255,255,0.7);
+    transition: all 0.2s ease;
+}
+
+.submit:hover {
+    box-shadow:
+        inset 4px 4px 8px rgba(0,0,0,0.25),
+        inset -4px -4px 8px rgba(255,255,255,0.7);
+}
+
+/* =========================
+   SWITCH LINK
+========================= */
+.user {
+    margin-top: 25px;
+    font-size: 14px;
+    color: #222;
+}
+
+.user span {
+    margin-left: 6px;
+    color: #004aad;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.user a {
+    text-decoration: none;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+        padding: 30px 20px;
+    }
+}

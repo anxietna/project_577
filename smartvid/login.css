@@ -1,0 +1,211 @@
+/* CSS Document */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #89CFF0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Ubuntu Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-variation-settings: "wdth" 100;
+}
+
+.container {
+    width: 50vh;
+    height: 65vh;
+    border-radius: 3vh;
+    background-color: inherit;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.2), -10px -10px 20px rgba(255, 255, 255, 0.8);
+    position: absolute;
+    transition: transform 2s ease-in-out;
+    backface-visibility: hidden;
+}
+
+.roleSelection {
+    display: flex;
+    justify-content: space-between;
+    padding: 1vh 2vh;
+}
+
+.role {
+    font-size: 2vh;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 0.5vh 1vh;
+    border-radius: 1vh;
+    transition: background-color 0.3s;
+}
+
+.userRole {
+    background-color: lightblue;
+}
+
+.adminRole {
+    background-color: lightcoral;
+}
+
+.role:hover {
+    background-color: lightgray;
+}
+
+.top {
+    text-align: center;
+    margin-bottom: 10vh;
+}
+
+.image {
+    width: 10vh;
+    height: 10vh;
+    position: relative;
+    top: 1vh;
+    left: 20vh;
+}
+
+.image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.top span {
+    position: relative;
+    top: 4vh;
+    font-family: "Briem Hand", cursive;
+    font-optical-sizing: auto;
+    font-weight: weight;
+    font-style: normal;
+    font-size: 3vh;
+    letter-spacing: 0.2vh;
+}
+
+.inputBox {
+    width: 40vh;
+    height: 6vh;
+    border-radius: 4vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-left: 4.5vh;
+    margin-bottom: 4vh;
+    box-shadow: 5px 5px 10px rgba(207, 77, 77, 0.1), -5px -5px 10px rgba(255, 255, 255, 0.6);
+}
+
+.inputBox:focus-within {
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px rgba(255, 255, 255, 0.5), 5px 5px 10px rgba(0, 0, 0, 0.1), -5px -5px 10px rgba(255, 255, 255, 0.5);
+    outline: 0.5vh solid rgba(255, 255, 255, 0.42);
+}
+
+.input {
+    height: 4vh;
+    width: 30vh;
+    margin-left: -2vh;
+    border: none;
+    outline: none;
+    background-color: inherit;
+}
+
+.submit {
+    margin-top: 2vh;
+    margin-left: -1vh;
+    height: 6vh;
+    width: 12vh;
+    border: none;
+    background-color: rgba(48, 45, 3, 0.2);
+    border-radius: 5vh;
+    cursor: pointer;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.3), -4px -4px 5px rgba(255, 255, 255, 0.7);
+    font-weight: bold;
+}
+
+.submit:hover {
+    outline: 0.5vh groove rgba(255, 255, 255, 0.5);
+}
+
+form {
+    text-align: center;
+}
+
+.user {
+    margin-top: 3vh;
+}
+
+.user span {
+    margin-left: 1vh;
+    font-size: 3vh;
+    font-weight: bold;
+    color: blue;
+    cursor: pointer;
+}
+
+.inputBoxBack {
+    height: 5vh;
+    margin-bottom: 3vh;
+}
+
+.imageBack {
+    width: 8vh;
+    height: 8vh;
+    left: 21.3vh;
+}
+
+.topBack {
+    margin-bottom: 7vh;
+}
+
+.submitBack {
+    margin-top: 0vh;
+    height: 6vh;
+    width: 10vh;
+    font-size: 2vh;
+}
+
+.userBack {
+    margin-top: 2.5vh;
+}
+
+.containerFront {
+    z-index: 2;
+    transform: rotateY(0deg);
+}
+
+.containerBack {
+    z-index: 1;
+    transform: rotateY(180deg);
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    padding: 1.5em;
+    background: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.popup-content {
+    position: relative;
+}
+
+.popup-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.popup-content p {
+    font-size: 1.2em;
+    margin: 1em 0 0;
+}

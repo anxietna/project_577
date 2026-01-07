@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/0dbb3f2ef0.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="navi.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="faq.css">
+    <title>HOMEPAGE</title>
+</head>
+<header>
+    <div id="header">
+        <h1>THE SMARTVID</h1>
+    </div>
+</header>
+<body>
+    <div class="navigationBar">
+        <nav>
+            <ul>
+            <li><a href="main.php">HOME</a></li>
+            <li><a href="view_summary.php">MY SUMMARIES</a></li>
+            <li><a href="subscription.php">SUBSCRIPTION</a></li>
+                <li><a href="feedback.php">FEEDBACK</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li class="profile-dropdown">
+                    <a href="#"><i class="fa-regular fa-user"></i></a>
+                    <div class="dropdown-content">
+                        <a href="settingspage.php">SETTINGS</a>
+                        <a id="logout">LOG OUT</a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <main>
+        <h1>Frequently Asked Questions</h1>
+        <div class="faq-container">
+            <div class="faq">
+                <button class="accordion">What is the purpose of this system? <i class="fa-solid fa-chevron-down"></i></button>
+                <div class="pannel">
+                    <p>The system aims to help students understand video key points through summaries, offering an alternative to watching full videos. It also encourages active learning via reading and quizzes.</p>
+                </div>
+            </div>
+            <div class="faq">
+                <button class="accordion">Which video types can it summarize? <i class="fa-solid fa-chevron-down"></i></button>
+                <div class="pannel">
+                    <p>Educational material for the students</p>
+                </div>
+            </div>
+            <!-- Add more FAQs as needed -->
+            <div class="faq">
+                <button class="accordion">How accurate are the summaries? <i class="fa-solid fa-chevron-down"></i></button>
+                <div class="pannel">
+                    <p>The summaries capture main points, topics covered, and conclusions, but it may miss minor details or visuals-only explanations. </p>
+                </div>
+            </div>
+            <div class="faq">
+                <button class="accordion">Does it support multiple languages? <i class="fa-solid fa-chevron-down"></i></button>
+                <div class="pannel">
+                    <p>For now, the system only supports English language only. More languages will be added in future updates. </p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                this.nextElementSibling.classList.toggle("active");
+
+                var pannel = this.nextElementSibling;
+
+                if (pannel.style.display === "block") {
+                    pannel.style.display = "none";
+                } else {
+                    pannel.style.display = "block";
+                }
+            });
+        }
+    </script>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="scripts.js"></script>
+        <script>
+            document.getElementById('logout').addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default link behavior
+                alert('Thank you for using The Summary Tube'); // Show the thank you message
+                window.location.href = 'MainPage.html'; // Redirect to MainPage.html
+            });
+        </script>
+    <script>
+        // Load footer.html content into the placeholder
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,74 @@
+body {
+        font-family: Arial;
+        background: #A7C7E7;
+        margin: 0;
+        padding: 0;
+    }
+
+    h2 {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    .plan-container {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        margin-top: 40px;
+        padding: 20px;
+    }
+
+    .plan-card {
+        background: white;
+        width: 260px;
+        padding: 25px;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        text-align: center;
+    }
+
+    .plan-title {
+        font-size: 22px;
+        font-weight: bold;
+        color: #ff4fa3;
+        margin-bottom: 10px;
+    }
+
+    .price {
+        font-size: 30px;
+        font-weight: bold;
+        margin-bottom: 10px;
+        color: #333;
+    }
+
+    .description {
+        font-size: 14px;
+        color: #666;
+        margin-bottom: 20px;
+    }
+
+    .subscribe-btn {
+        background: #ff69b4;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 25px;
+        font-size: 16px;
+        cursor: pointer;
+        width: 100%;
+    }
+
+    .subscribe-btn:hover {
+        background: #ff4f9a;
+    }
+
+    .current-plan {
+    text-align: center;
+    font-size: 16px;
+    margin-top: 20px;
+    }
+
+    .current-plan p,
+    .current-plan strong {
+        color: black;
+    }

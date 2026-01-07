@@ -1,0 +1,79 @@
+/* FAQ page full background */
+body {
+    background-color: #A7C7E7;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Main container */
+main, .container {
+    background-color: #A7C7E7;
+    padding: 40px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Page heading */
+main h1, h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #1d1b1b;
+    text-align: center;
+}
+
+/* Each FAQ accordion */
+.accordion {
+    background-color: #A7C7E7;
+    color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 2rem 2.5rem;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+/* Accordion icon */
+.accordion i {
+    font-size: 1.6rem;
+}
+
+/* Hover and active accordion */
+.active, .accordion:hover {
+    background-color: #92B8E0; /* Slightly darker shade for hover */
+}
+
+/* FAQ panel */
+.pannel {
+    padding: 0 2rem 2.5rem 2rem;
+    background-color: #A7C7E7;
+    overflow: hidden;
+    display: none;
+    border-radius: 0 0 10px 10px;
+}
+
+.pannel p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+/* FAQ wrapper */
+.faq {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+    border-radius: 10px;
+}
+
+.faq.active {
+    border: none;
+}

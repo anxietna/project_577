@@ -1,0 +1,170 @@
+/* General body styling */
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #A7C7E7; /* Light Blue */
+    overflow-x: hidden;
+}
+
+/* Container card */
+.container {
+    background-color: #000080; /* Dark Blue */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    width: 400px;
+    margin: 50px auto;
+    color: #A7C7E7; /* Light Blue */
+    text-align: center; /* Center everything inside */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Heading */
+h2 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    color: #F7FFCC; /* Soft Yellow */
+    text-align: center; /* Center title */
+}
+
+/* Textarea styling */
+textarea {
+    width: 100%;           /* wider inside the container */
+    height: 100px;        /* taller for more text */
+    padding: 15px;        /* more padding */
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    resize: none;
+    font-size: 16px;      /* bigger text */
+    outline: none;
+    transition: 0.3s;
+    display: block;
+    margin: 0 auto;       /* center textarea */
+}
+
+textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+
+/* Star rating container */
+.stars {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    margin: 15px 0;
+}
+
+.stars input {
+    display: none;
+}
+
+.stars label {
+    font-size: 30px;
+    color: #ccc;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.stars input:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+    color: #FFDD00; /* Bright yellow stars */
+}
+
+/* Submit button styling */
+button {
+    width: 100%;
+    margin-top: 10px;
+    padding: 12px;
+    background-color: #4CAF50; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+/* Popup overlay */
+.popup {
+    display: none; /* hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Popup box */
+.popup-content {
+    background-color: #000080; /* Dark Blue */
+    color: #A7C7E7; /* Light Blue */
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+    width: 300px;
+}
+
+/* Popup close button */
+.popup-content button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.popup-content button:hover {
+    background-color: #45a049;
+}
+
+/* Feedback message */
+.message {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.success {
+    color: #00FF7F; /* Spring green for success */
+}
+
+.error {
+    color: #FF6347; /* Tomato red for error */
+}
+
+/* Name input styling */
+input[type="text"] {
+    width: 100%;           /* wide like textarea */
+    padding: 12px;        /* padding for comfort */
+    border-radius: 12px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-bottom: 15px;  /* space below input */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;   /* center input */
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
