@@ -1,36 +1,48 @@
 <?php
 session_start();
+include 'db.php';
 
-// Redirect to login if user is not logged in
 if (!isset($_SESSION['userID'])) {
-    header("Location: login.php"); // Adjust this to your login page
+    header("Location: login.php");
     exit;
 }
 
-// Include your database connection file
-include 'db.php';
-
-// Check if the user has confirmed the deletion
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['confirm-delete'])) {
-    // Get user ID from session
-    $userId = $_SESSION['user_id'];
 
-    // Perform deletion from the database
-    $sql = "DELETE FROM user WHERE idUser = $userId"; 
-    if (mysqli_query($conn, $sql)) {
-        // Deletion successful
-        $alertMessage = "Your account has been successfully deleted.";
-        session_destroy(); // Destroy the session after deletion
-        // Redirect with JavaScript alert
-        echo "<script>alert('$alertMessage'); window.location.href = 'MainPage.html';</script>";
+    $userId = $_SESSION['userID'];
+
+    // Start transaction (safe delete)
+    mysqli_begin_transaction($conn);
+
+    try {
+        // 1. Delete summaries
+        mysqli_query($conn, "DELETE FROM summaries WHERE idUser = $userId");
+
+        // 2. Delete subscriptions
+        mysqli_query($conn, "DELETE FROM subscription WHERE userID = $userId");
+
+        // 3. Delete payments (if exists)
+        mysqli_query($conn, "DELETE FROM payment WHERE idUser = $userId");
+
+        // 4. Delete feedback (if exists)
+        mysqli_query($conn, "DELETE FROM feedback WHERE userID = $userId");
+
+        // 5. Finally delete user
+        mysqli_query($conn, "DELETE FROM user WHERE idUser = $userId");
+
+        mysqli_commit($conn);
+
+        session_destroy();
+        echo "<script>
+            alert('Your account has been successfully deleted.');
+            window.location.href='MainPage.html';
+        </script>";
         exit();
-    } else {
-        echo "Error deleting record: " . mysqli_error($conn);
+
+    } catch (Exception $e) {
+        mysqli_rollback($conn);
+        echo "Error deleting account.";
     }
-} elseif ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // If the form is submitted without confirmation, redirect back (or show an error)
-    header("Location: homepage.php"); // Redirect back to settings page
-    exit();
 }
 ?>
 
@@ -78,5 +90,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['confirm-delete'])) {
     </form>
 </body>
 </html>
+
 
 
