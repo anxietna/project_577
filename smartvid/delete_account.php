@@ -2,8 +2,8 @@
 session_start();
 
 // Redirect to login if user is not logged in
-if (!isset($_SESSION['user_id'])) {
-    header("Location: login1.php"); // Adjust this to your login page
+if (!isset($_SESSION['userID'])) {
+    header("Location: login.php"); // Adjust this to your login page
     exit;
 }
 
@@ -17,7 +17,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['confirm-delete'])) {
 
     // Perform deletion from the database
     $sql = "DELETE FROM user WHERE idUser = $userId"; 
-    if (mysqli_query($con, $sql)) {
+    if (mysqli_query($conn, $sql)) {
         // Deletion successful
         $alertMessage = "Your account has been successfully deleted.";
         session_destroy(); // Destroy the session after deletion
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['confirm-delete'])) {
         echo "<script>alert('$alertMessage'); window.location.href = 'MainPage.html';</script>";
         exit();
     } else {
-        echo "Error deleting record: " . mysqli_error($con);
+        echo "Error deleting record: " . mysqli_error($conn);
     }
 } elseif ($_SERVER["REQUEST_METHOD"] == "POST") {
     // If the form is submitted without confirmation, redirect back (or show an error)
@@ -78,3 +78,4 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['confirm-delete'])) {
     </form>
 </body>
 </html>
+
