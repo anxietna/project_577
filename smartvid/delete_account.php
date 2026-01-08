@@ -74,8 +74,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['confirm-delete'])) {
     <form method="post">
         <p>Are you sure you want to delete your account?</p>
         <input type="submit" name="confirm-delete" value="Yes, I'm sure">
-        <a href="homepage.php">No, go back</a>
+        <a href="main.php">No, go back</a>
     </form>
 </body>
 </html>
+
 
