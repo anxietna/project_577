@@ -8,7 +8,7 @@ from google.genai import types
 # --- Configuration ---
 # ⚠️ IMPORTANT: Replace "YOUR_GEMINI_API_KEY" with your actual key. 
 # It's best practice to load this from an environment variable (os.environ.get("GEMINI_API_KEY")).
-GEMINI_API_KEY = "" 
+GEMINI_API_KEY = "" #cannot expose the api key here in the github
 YOUTUBE_URL = "https://www.youtube.com/watch?v=kCpfsypEnIc" # Replace with the video you want to summarize
 
 def summarize_youtube_video(api_key: str, url: str):
@@ -61,6 +61,7 @@ if __name__ == "__main__":
     summarize_youtube_video(GEMINI_API_KEY, YOUTUBE_URL)
 
    
+
 
 
 
