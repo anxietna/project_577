@@ -1,5 +1,5 @@
 
-const GEMINI_API_KEY = "";
+const GEMINI_API_KEY = ""; //cannot expose the api key here in the github
 const API_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=" + GEMINI_API_KEY;
 const MODEL_NAME = "gemini-2.5-flash"; // A model that supports multimodal input
 
@@ -94,3 +94,4 @@ async function summarizeVideo() {
     }
 
 }
+
