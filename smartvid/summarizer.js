@@ -1,5 +1,5 @@
 
-const GEMINI_API_KEY = "AIzaSyDUyaUZmYHvoga2s3T5a9ElRpzBJWlpOe8";
+const GEMINI_API_KEY = "";
 const API_ENDPOINT = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent?key=" + GEMINI_API_KEY;
 const MODEL_NAME = "gemini-2.5-flash"; // A model that supports multimodal input
 
@@ -92,4 +92,5 @@ async function summarizeVideo() {
         // 8. Restore button state
         document.getElementById('summaryButton').disabled = false;
     }
+
 }
