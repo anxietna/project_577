@@ -2,20 +2,20 @@
 body {
     margin: 0;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: #A7C7E7; /* Light Blue */
+    background-color: #A7C7E7; 
     overflow-x: hidden;
 }
 
 /* Container card */
 .container {
-    background-color: #000080; /* Dark Blue */
+    background-color: #000080; 
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 6px 18px rgba(0,0,0,0.2);
     width: 400px;
     margin: 50px auto;
-    color: #A7C7E7; /* Light Blue */
-    text-align: center; /* Center everything inside */
+    color: #A7C7E7;
+    text-align: center; 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -25,23 +25,23 @@ body {
 h2 {
     font-size: 1.8em;
     margin-bottom: 20px;
-    color: #F7FFCC; /* Soft Yellow */
-    text-align: center; /* Center title */
+    color: #F7FFCC; 
+    text-align: center; 
 }
 
 /* Textarea styling */
 textarea {
-    width: 100%;           /* wider inside the container */
-    height: 100px;        /* taller for more text */
-    padding: 15px;        /* more padding */
+    width: 100%;           
+    height: 100px;        
+    padding: 15px;        
     border-radius: 12px;
     border: 1px solid #ccc;
     resize: none;
-    font-size: 16px;      /* bigger text */
+    font-size: 16px;      
     outline: none;
     transition: 0.3s;
     display: block;
-    margin: 0 auto;       /* center textarea */
+    margin: 0 auto;       
 }
 
 textarea:focus {
@@ -142,24 +142,24 @@ button:hover {
 }
 
 .success {
-    color: #00FF7F; /* Spring green for success */
+    color: #00FF7F; 
 }
 
 .error {
-    color: #FF6347; /* Tomato red for error */
+    color: #FF6347; 
 }
 
 /* Name input styling */
 input[type="text"] {
-    width: 100%;           /* wide like textarea */
-    padding: 12px;        /* padding for comfort */
+    width: 100%;           
+    padding: 12px;        
     border-radius: 12px;
     border: 1px solid #ccc;
     font-size: 16px;
-    margin-bottom: 15px;  /* space below input */
+    margin-bottom: 15px;  
     display: block;
     margin-left: auto;
-    margin-right: auto;   /* center input */
+    margin-right: auto;   
     outline: none;
     transition: 0.3s;
 }
