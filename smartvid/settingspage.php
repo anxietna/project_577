@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = mysqli_real_escape_string($conn, $_POST['username']);
     $password = mysqli_real_escape_string($conn, $_POST['password']);
 
-    /* Check username duplication (excluding current user) */
+    
     $check = mysqli_query(
         $conn,
         "SELECT * FROM user WHERE username='$username' AND idUser != '$userID'"
@@ -125,3 +125,4 @@ $row = mysqli_fetch_assoc($qry);
 </script>
 </body>
 </html>
+
