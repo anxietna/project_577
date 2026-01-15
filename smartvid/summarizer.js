@@ -27,8 +27,7 @@ async function summarizeVideo() {
     statusMessage.innerHTML = 'Sending request to Gemini AI. This may take a moment.';
     document.getElementById('summaryButton').disabled = true;
 
-    // 3. Construct the API request body
-// Inside the async function summarizeVideo() in summarizer.js
+
 
     // 3. Construct the API request body
     const requestBody = {
@@ -56,7 +55,7 @@ async function summarizeVideo() {
         }
     };
 
-// ...
+
 
     // 4. Send the request to the Gemini API
     try {
@@ -94,4 +93,5 @@ async function summarizeVideo() {
     }
 
 }
+
 
