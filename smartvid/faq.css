@@ -49,7 +49,7 @@ main h1, h1 {
 
 /* Hover and active accordion */
 .active, .accordion:hover {
-    background-color: #92B8E0; /* Slightly darker shade for hover */
+    background-color: #92B8E0; 
 }
 
 /* FAQ panel */
@@ -77,3 +77,4 @@ main h1, h1 {
 .faq.active {
     border: none;
 }
+
