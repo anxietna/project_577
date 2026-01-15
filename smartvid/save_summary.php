@@ -9,7 +9,7 @@ if (!isset($_SESSION['userID'])) {
 
 $userID = $_SESSION['userID'];
 
-/* ---------- 1️⃣ CHECK USAGE ---------- */
+/* - CHECK USAGE */
 $sql = "SELECT usage_count, max_usage 
         FROM subscription 
         WHERE userID='$userID' AND status='active' 
@@ -26,7 +26,7 @@ if ($usageCount >= $maxUsage) {
     exit();
 }
 
-/* ---------- 2️⃣ READ REAL DATA FROM FORM ---------- */
+/*  READ REAL DATA FROM FORM  */
 
 $video_url     = mysqli_real_escape_string($conn, $_POST['video_url']);
 $summary_text  = mysqli_real_escape_string($conn, $_POST['summary']);
@@ -38,7 +38,7 @@ if (empty($summary_text) || empty($subject) || empty($video_url)) {
     exit();
 }
 
-/* ---------- 3️⃣ SAVE SUMMARY ---------- */
+/*  SAVE SUMMARY  */
 
 $sql_save = "INSERT INTO summaries (idUser, video_url, summary_text, subject, created_at)
              VALUES ('$userID', '$video_url', '$summary_text', '$subject', NOW())";
@@ -58,3 +58,4 @@ else {
     echo "Failed to save summary.";
 }
 ?>
+
