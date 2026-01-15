@@ -85,16 +85,15 @@ body, html {
 .navbar-links li a:hover {
     color: #ffb700;
 }
-/* This is a clearance element to push the content down below the fixed navbar */
 .navbar-spacer {
-    height: 60px; /* Adjust this value if your navbar is taller/shorter */
+    height: 60px; 
     display: block;
 }
 
 .summarizer-container {
     padding: 50px;
     max-width: 600px;
-    /* Adjusted margin-top to push content below the fixed navbar */
+
     margin: 100px auto 50px auto; 
     text-align: center;
     background-color: #202020;
@@ -130,8 +129,8 @@ body, html {
     background-color: #f9f9f9;
     text-align: left;
     white-space: pre-wrap;
-    min-height: 100px; /* Ensure space for the summary */
-    color: #000000; /* Ensure text is visible inside the light background */
+    min-height: 100px; 
+    color: #000000; 
 }
 .status-message {
     margin-top: 15px;
@@ -143,13 +142,10 @@ body, html {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    /* CHANGE THIS LINE */
-    /* Use calc() to make the minimum height 100% of the viewport (100vh) plus the navbar height (e.g., 60px) */
     min-height: calc(100vh + 60px); 
-    /* If you used the padding-top method earlier, you may need to adjust this value */
     
     position: relative;
-    padding-top: 60px; /* Ensure content starts below the fixed navbar */
+    padding-top: 60px; 
 }
 .content {
     position: absolute;
@@ -240,5 +236,6 @@ footer {
     font-size: 1em;
     transition: background-color 0.3s, transform 0.2s;
 }
+
 
 
