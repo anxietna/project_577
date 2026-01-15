@@ -8,10 +8,9 @@ if (!isset($_SESSION['admin'])) {
     exit();
 }
 
-// Decide which view admin wants
 $view = $_GET['view'] ?? 'users';
 
-// --------------------- USERS QUERY ---------------------
+//USERS QUERY 
 if ($view === 'users') {
     $userQuery = "
         SELECT u.idUser, u.name, u.email, u.username,
@@ -23,7 +22,7 @@ if ($view === 'users') {
     $userResult = mysqli_query($conn, $userQuery);
 }
 
-// --------------------- FEEDBACK QUERY ---------------------
+// FEEDBACK QUERY 
 if ($view === 'feedback') {
     $feedbackQuery = "
         SELECT f.feedbackID, u.name AS userName, f.feedbackText, f.rating, f.created_at
@@ -34,7 +33,7 @@ if ($view === 'feedback') {
     $feedbackResult = mysqli_query($conn, $feedbackQuery);
 }
 
-// --------------------- SUBSCRIPTIONS QUERY ---------------------
+//  SUBSCRIPTIONS QUERY
 if ($view === 'subscriptions') {
     $subQuery = "
         SELECT s.subscriptionID, u.name AS userName, s.subscription_type, s.usage_count, s.max_usage, s.start_date, s.status
@@ -45,13 +44,13 @@ if ($view === 'subscriptions') {
     $subResult = mysqli_query($conn, $subQuery);
 }
 
-// --------------------- SUBSCRIPTION PLANS QUERY ---------------------
+// SUBSCRIPTION PLANS QUERY 
 if ($view === 'subsplan') {
     $planQuery = "SELECT * FROM subsplan ORDER BY planID ASC";
     $planResult = mysqli_query($conn, $planQuery);
 }
 
-// --------------------- DELETE FEEDBACK ---------------------
+// DELETE FEEDBACK
 if (isset($_GET['deleteFeedback'])) {
     $feedbackID = intval($_GET['deleteFeedback']);
     mysqli_query($conn, "DELETE FROM feedback WHERE feedbackID = $feedbackID");
@@ -59,7 +58,7 @@ if (isset($_GET['deleteFeedback'])) {
     exit();
 }
 
-// --------------------- DELETE PLAN ---------------------
+// DELETE PLAN 
 if (isset($_GET['deletePlan'])) {
     $planID = intval($_GET['deletePlan']);
     mysqli_query($conn, "DELETE FROM subsplan WHERE planID = $planID");
@@ -147,7 +146,8 @@ if (isset($_GET['deletePlan'])) {
                     <td><?php echo str_repeat('⭐', $row['rating']); ?></td>
                     <td><?php echo $row['created_at']; ?></td>
                     <td>
-                        <a href="admin_dashboard.php?view=feedback&deleteFeedback=<?php echo $row['feedbackID']; ?>" onclick="return confirm('Delete this feedback?');">Delete</a>
+                        <a href="admin_dashboard.php?view=feedback&deleteFeedback=<?php echo $row['feedbackID']; ?>" 
+                        onclick="return confirm('Delete this feedback?');">Delete</a>
                     </td>
                 </tr>
             <?php } ?>
